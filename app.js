@@ -48,7 +48,6 @@ function confrontation(server, player){
     }
 }
 
-
 function recordHist(server, player){
     if(server==="rock"){
         if(player === "rock"){
