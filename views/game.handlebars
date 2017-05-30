@@ -1,21 +1,49 @@
+      <div class="jumbotron">
+        <h1>Hi! Came to play with me?<br/><small>Choose now</small></h1>
+        <p>I'll make my pick when you make yours</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="/" role="button">I made a mistake, I don't want to play</a>
+        </p>
+      </div>
+
 <div class="row">
-        <div class="col-md-12">
-          Please select one option.
-         </div>
+        <div class="col-md-12 center-block">
+          <p class="playNow">Select now</p>
+        </div>
       </div>
       <div class="row">
-         <div class="col-md-4">
+         <div class="col-md-4 text-center">
            <a class="btn btn-primary" href="/game/paper/" role="button">Paper</a>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 text-center">
            <a class="btn btn-primary" href="/game/rock/" role="button">Rock.</a>      
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 text-center">
            <a class="btn btn-primary" href="/game/scissors/" role="button">Scissors.</a>
           </div>
       </div>
       <div class="row">
           <div class="col-md-12">
-          {{gameResult}}
+          <p class="result">{{gameResult}}</p>
+         </div>
+        </div>
+
+
+  <div class="row">
+          <div class="col-md-12">
+          <table class="table-bordered">
+            <tr>
+                  <th>Server</th>
+                  <th>Player</th>
+                  <th>Winner</th>
+              </tr>
+          {{#each gameHistory}}
+            <tr><td>{{ this.[0] }}</td>
+            <td>{{ this.[1] }}</td>
+            <td>{{ this.[2] }}</td>
+            
+            </tr>
+          {{/each}}
+          </table>
          </div>
         </div>

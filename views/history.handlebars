@@ -1,0 +1,28 @@
+       <!-- Server pick / Player Pick / Winner -->
+<div class="jumbotron">
+    <h1><small>What's happened so far</small><br/>History</h1>
+    <p>This help was provide by Marc-Antoine. Comments are disabled.</p>
+    <p>
+        <a class="btn btn-lg btn-primary" href="/" role="button">Go home</a>
+        <a class="btn btn-lg btn-primary" href="/game" role="button">Play more</a>
+    </p>
+</div>
+
+  <div class="row">
+          <div class="col-md-12">
+          <table class="table-bordered">
+            <tr>
+                  <th>Server</th>
+                  <th>Player</th>
+                  <th>Winner</th>
+              </tr>
+          {{#each gameHistory}}
+            <tr><td>{{ this.[0] }}</td>
+            <td>{{ this.[1] }}</td>
+            <td>{{ this.[2] }}</td>
+            
+            </tr>
+          {{/each}}
+          </table>
+         </div>
+        </div>
